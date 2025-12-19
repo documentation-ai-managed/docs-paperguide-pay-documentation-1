@@ -1,0 +1,155 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to Paperguide-pay.
+---
+
+## Recent Updates
+
+Stay informed about all changes to Paperguide-pay. You receive new features, performance improvements, and bug fixes in each release. Review the details below to understand impacts on your integration.
+
+<Columns cols={3}>
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Get started with the latest version.
+  </Card>
+  <Card title="API Reference" icon="code" href="/api-reference">
+    Explore updated endpoints.
+  </Card>
+  <Card title="Migration Guide" icon="arrow-right" href="/migration">
+    Upgrade your integration smoothly.
+  </Card>
+</Columns>
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added support for recurring payments via the `/v1/payments/recurring` endpoint
+- Introduced webhook retries with exponential backoff for improved reliability
+- New dashboard analytics for transaction volume and failure rates at `https://dashboard.example.com/analytics`
+
+## Improvements
+
+- Reduced API latency by `>30%` for high-volume merchants
+- Enhanced error messages with specific codes like `PAYMENT_DECLINED_INSUFFICIENT_FUNDS`
+
+## Bug Fixes
+
+- Fixed race condition in idempotency key handling
+- Resolved token expiration issues during long-running checkout sessions
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["bugfix", "security"]}>
+
+## Security Updates
+
+- Patched potential XSS vulnerability in webhook payload processing (CVE-2024-XXXX)
+- Enforced stricter CORS policies on `https://api.example.com`
+
+## Bug Fixes
+
+- Corrected refund amount calculation for partial refunds
+- Fixed pagination bugs in the `/v1/transactions` list endpoint
+
+## Improvements
+
+- Added `retry_count` field to transaction responses for better monitoring
+
+</Update>
+
+<Update label="2024-08-01" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Core payment processing with `/v1/payments` endpoint
+- Customer vault for saving payment methods securely
+- Basic webhooks for `payment.succeeded` and `payment.failed` events
+
+## Breaking Changes
+
+- Updated request body schema: `amount` now requires integer in cents (e.g., `10000` for `$100`)
+
+## Initial Setup
+
+- First stable release with full TypeScript SDK support
+
+</Update>
+
+## How to Upgrade
+
+Follow these steps to update your Paperguide-pay integration to the latest version.
+
+<Steps>
+  <Step title="Check Compatibility" icon="check-circle">
+
+Review your current version against the [migration guide](/migration). Test endpoints like `https://api.example.com/v1/payments` in staging.
+
+  </Step>
+  <Step title="Update SDK" icon="download">
+
+```bash
+npm install paperguide-pay@latest
+```
+
+Or for Python:
+
+````python
+pip install paperguide-pay==1.2.0
+````
+
+  </Step>
+  <Step title="Deploy and Test" icon="play">
+
+Verify webhooks at `https://your-webhook-url.com/webhook` and monitor dashboard at `https://dashboard.example.com`.
+
+  </Step>
+</Steps>
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  import { PaperguidePay } from 'paperguide-pay';
+
+  const pay = new PaperguidePay('YOUR_API_KEY');
+  const payment = await pay.payments.create({
+    amount: 10000, // $100.00 in cents
+    currency: 'usd',
+    customer: 'cus_123'
+  });
+  ```
+  ```python
+  from paperguide_pay import PaperguidePay
+
+  pay = PaperguidePay(api_key='YOUR_API_KEY')
+  payment = pay.payments.create(
+      amount=10000,  # $100.00 in cents
+      currency='usd',
+      customer='cus_123'
+  )
+  ```
+</CodeGroup>
+
+## Upcoming Changes
+
+<Callout kind="info">
+
+Preview v1.3.0 (expected November 2024):
+
+- Multi-currency support expansion
+- Apple Pay and Google Pay integration
+- Enhanced fraud detection with `risk_score` in responses
+
+Prepare by testing in sandbox mode.
+
+</Callout>
+
+<Expandable title="Detailed Migration Notes" default-open="false">
+
+For v1.2.0, update your idempotency keys to use UUID v4 format. Example:
+
+```javascript
+const idempotencyKey = crypto.randomUUID();
+```
+
+This prevents duplicate charges during retries.
+
+</Expandable>

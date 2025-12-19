@@ -1,0 +1,140 @@
+---
+title: Getting Started with Paperguide-pay
+description: Set up your account and create your first documentation space in just a few minutes.
+---
+
+## Prerequisites
+
+Before you begin, ensure you have:
+
+- A valid email address for account registration
+- Access to a modern web browser like Chrome or Firefox
+- Optional: Documents ready to upload (PDF, Markdown, or images)
+
+<Callout kind="info">
+  Paperguide-pay offers a free tier to get started. Upgrade later for advanced features like custom domains and team collaboration.
+</Callout>
+
+## Create Your Account
+
+Sign up and log in to access the dashboard.
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+    Visit `https://app.paperguide-pay.com/signup`.
+
+    Fill in your email, create a strong password, and complete the verification.
+
+    Click **Create Account**.
+  </Step>
+
+  <Step title="Verify Email" icon="mail">
+    Check your inbox for the verification link from Paperguide-pay.
+
+    Click the link to activate your account.
+  </Step>
+
+  <Step title="Log In" icon="log-in">
+    Return to `https://app.paperguide-pay.com/login`.
+
+    Enter your credentials and access the dashboard.
+  </Step>
+</Steps>
+
+## Create Your First Documentation Project
+
+Once logged in, set up a new space for your docs.
+
+<Steps>
+  <Step title="New Project" icon="plus">
+    Click **New Documentation Space** in the dashboard.
+
+    Enter a name like "My API Docs" and select a template (e.g., "API Reference").
+  </Step>
+
+  <Step title="Configure Basics" icon="settings">
+    Add a description and set visibility to public or private.
+
+    Save to generate your project URL, e.g., `https://docs.paperguide-pay.com/my-api-docs`.
+  </Step>
+</Steps>
+
+## Quick Interface Tour
+
+Familiarize yourself with the main sections:
+
+<Columns cols={3}>
+  <Card title="Editor" icon="edit-3" href="#editor-section">
+    Write and format Markdown or MDX content with live preview.
+  </Card>
+
+  <Card title="Pages" icon="file-text" href="#pages-section">
+    Organize pages, add navigation, and manage hierarchy.
+  </Card>
+
+  <Card title="Settings" icon="sliders" href="#settings-section">
+    Customize themes, SEO, and integrations.
+  </Card>
+</Columns>
+
+## Upload Your Initial Documents
+
+Add content to your project using these methods:
+
+<Tabs>
+  <Tab title="Drag & Drop" icon="upload">
+    In the Editor, drag files directly into the page.
+
+    Supported formats: PDF, PNG, MD, DOCX.
+
+    Files upload automatically and embed as previews.
+  </Tab>
+
+  <Tab title="API Upload" icon="code">
+    Use the Documents API for automation.
+
+    <CodeGroup tabs="JavaScript,cURL">
+      ````javascript
+      const formData = new FormData();
+      formData.append('file', documentFile);
+      formData.append('projectId', 'your-project-id');
+
+      const response = await fetch('https://api.paperguide-pay.com/v1/documents', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${YOUR_API_KEY}`
+        },
+        body: formData
+      });
+      ````
+
+      ````bash
+      curl -X POST https://api.paperguide-pay.com/v1/documents \
+        -H "Authorization: Bearer YOUR_API_KEY" \
+        -F "file=@/path/to/document.pdf" \
+        -F "projectId=your-project-id"
+      ````
+    </CodeGroup>
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+  Get your `{YOUR_API_KEY}` from Dashboard > Settings > API Keys.
+</Callout>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Customize Your Docs" icon="brush" href="/configuration">
+    Learn advanced styling and components.
+  </Card>
+
+  <Card title="Add Authentication" icon="shield" href="/authentication">
+    Secure your documentation spaces.
+  </Card>
+</Columns>
+
+<Expandable title="Troubleshooting Common Issues" default-open="false">
+  - **Upload fails**: Check file size (`<10MB`) and format.
+  - **Project not visible**: Verify sharing settings in project dashboard.
+</Expandable>
