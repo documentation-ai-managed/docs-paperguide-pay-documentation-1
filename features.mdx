@@ -1,139 +1,56 @@
 ---
-title: Core Features of Paperguide-pay
+title: 'Rule 4: Source of Meat and Fat Ingredients'
 description: >-
-  Explore the essential tools and capabilities for effective documentation
-  organization and collaboration.
+  The source and quality of meat and fat ingredients play a crucial role in
+  determining the overall quality of dry cat food.
 ---
-## Overview
+This rule evaluates these sources and deducts points accordingly.
 
-Paperguide-pay provides powerful features to help you organize, collaborate on, and share your payment documentation efficiently. You can structure complex docs with nested hierarchies, enable team collaboration with version history, search across content using tags, and export in multiple formats.
+## Quality Factors for By-product Meat and Unknown Sources
 
-1. this is new
+1. **By-product Meat Quality Factor**: By-product meats, such as internal organs and intestines, are considered lower-quality protein sources compared to whole meats. They are assigned a quality factor of 1/4 or 0.25, meaning they are considered one-fourth as valuable as whole meat sources.
 
-   1. sas
+2. **Unknown Source Quality Factor**: When the source of the main meat or fat ingredient is not specified (e.g., "meat and meat derivatives," "animal fats," "vegetable oils"), the quality of these ingredients cannot be properly evaluated. This uncertainty leads to a deduction of points.
 
-   2. as
+## Calculation of Points Deduction Based on Meat and Fat Ingredient Sources
 
-2. asdas
+1. **By-product Meat Quantity Factor**:
 
-3. asdas\
+   - By-product as the main meat ingredient: -1 (full deduction)
+
+   - Partial by-product as the main meat ingredient (e.g., "chicken and chicken by-product"): -1/2 (half deduction)\
 
 
-<Columns cols="2">
-  <Card title="Structured Docs" href="#document-structuring" icon="book-open" horizontal="false">
-    Build nested hierarchies for clear navigation.
-  </Card>
+   Points deducted = (Total dry matter protein %) × (By-product quantity factor) × (By-product quality factor)\
 
-  <Card title="Team Collaboration" href="#collaboration" icon="users" horizontal="false">
-    Work together with real-time edits and version control.
-  </Card>
 
-  <Card title="Advanced Search" href="#search-tagging" icon="search" horizontal="false">
-    Find content quickly with tags and full-text search.
-  </Card>
+   Example: 34% protein, partial by-product meat meal
+   Points deducted = 34 × (-1/2) × (1/4) = -4.25 points
 
-  <Card title="Export Options" href="#export-sharing" icon="download" horizontal="false">
-    Share docs via PDF, HTML, or public links.
-  </Card>
-</Columns>
+2. **By-product Supplement Meat Ingredient Location Impact**:
 
-## Document Structuring and Hierarchy
+   - By-product supplement meat ingredient at 2nd-3rd places: -4 points
 
-You create intuitive document structures using folders, pages, and subpages. This hierarchy ensures users navigate payment guides effortlessly, from high-level overviews to detailed API references.
+   - By-product supplement meat ingredient at 4th-5th places: -2 points
 
-<Steps>
-  <Step title="Create Folders" icon="folder" title-type="p">
-    In the dashboard, click **New Folder** to group related payment docs.
-  </Step>
+   - By-product supplement meat ingredient at 6th-7th places: -1 point
 
-  <Step title="Add Pages" icon="file-text" title-type="p">
-    Inside folders, add pages for topics like `{invoicing}` or `{subscriptions}`.
-  </Step>
+3. **Unknown Source of Main Ingredients**:
 
-  <Step title="Nest Subpages" icon="chevron-down" title-type="p">
-    Drag pages to create sublevels, up to five deep.
-  </Step>
-</Steps>
+   - Unknown source of the main meat ingredient: -5 points
 
-```mermaid
-graph TD
-    A[Root] --> B[Payments]
-    B --> C[Invoicing]
-    C --> D[API Reference]
-    B --> E[Subscriptions]
-    E --> F[Webhooks]
-```
+   - Unknown source of the main fat ingredient: -3 points
 
-<Callout kind="tip" collapsed="false">
-  Use frontmatter in pages to set custom `{title}` and `{description}` for better SEO.
-</Callout>
+## Explanation of the Impact of By-products on Food Quality
 
-## Collaboration and Version Control
+By-products, such as internal organs and intestines, are considered lower-quality sources of protein for cats for several reasons:
 
-Invite team members to co-edit docs in real-time. Paperguide-pay tracks every change with version history, so you revert mistakes or review payment policy updates.
+1. **Undefined Content**: By-products' exact composition and nutritional value can vary significantly, making it difficult to assess their quality and suitability for a cat's diet.
 
-<Tabs>
-  <Tab title="Invite Collaborators" icon="user-plus">
-    Go to **Team Settings** > **Invite Member**. Share read/write access for `{editor}` roles.
-  </Tab>
+2. **Quality Control**: The quality control and processing methods for by-products are generally less stringent than those for whole meat sources, potentially leading to inconsistencies and contamination.
 
-  <Tab title="Version History" icon="git-branch">
-    Click **History** on any page to view diffs and restore versions.
-  </Tab>
-</Tabs>
+3. **Digestibility**: By-products are often less digestible for cats compared to whole meat sources, which can lead to nutrient malabsorption and digestive issues.
 
-<CodeGroup show-lines="true" tabs={[]}>
-  ```bash
-  paperguide invite --email team@company.com --role editor
-  ```
+4. **Allergies and Intolerances**: Some cats may develop allergies or intolerances to certain by-products, particularly those derived from less common sources or processed under suboptimal conditions.
 
-  ```javascript
-  await paperguide.authenticatedRequest('/teams/invite', {
-    method: 'POST',
-    body: { email: 'team@company.com', role: 'editor' }
-  });
-  ```
-</CodeGroup>
-
-## Search and Tagging Functionalities
-
-Tag pages with labels like `{stripe}`, `{paypal}`, or `{recurring}` for precise searches. Full-text search scans titles, content, and tags across your entire workspace.
-
-| Feature          | Description                  | Example Tags                |
-| ---------------- | ---------------------------- | --------------------------- |
-| Full-Text Search | Matches keywords in content  | `invoicing`, `refunds`      |
-| Tag Filtering    | Narrow by custom labels      | `{webhook}`, `{pci}`        |
-| Advanced Filters | Combine date, author, status | `status:draft author:alice` |
-
-<Callout kind="info" collapsed="false">
-  Tags support up to 50 characters and special chars like `{}` for grouping.
-</Callout>
-
-## Export and Sharing Options
-
-Export docs as PDF for compliance audits or share public links for client portals. You control access with passwords or expiration dates.
-
-<ExpandableGroup>
-  <Expandable title="PDF Export" default-open="true">
-    Select pages > **Export > PDF**. Includes hierarchy and images.
-  </Expandable>
-
-  <Expandable title="Public Sharing" default-open="false">
-    Publish pages > Copy `{share-link}`. Set viewer permissions.
-  </Expandable>
-
-  <Expandable title="HTML Archive" default-open="false">
-    Export entire workspace as a static site for offline use.
-  </Expandable>
-</ExpandableGroup>
-
-<Columns cols="2">
-  <Card title="Quickstart" href="/quickstart" icon="rocket" horizontal="false">
-    Set up your first workspace.
-  </Card>
-
-  <Card title="Authentication" href="/authentication" icon="shield" horizontal="false">
-    Secure your payment docs.
-  </Card>
-</Columns>
-
+While by-products can contribute to the overall protein content of cat food, their lower quality and potential negative impacts on digestibility and health make them less desirable as the primary protein source. Whole meat sources, especially those from high-quality, named sources, are generally preferred for obligate carnivores like cats.
