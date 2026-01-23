@@ -59,7 +59,8 @@
                             "path": "quickstart",
                             "icon": "zap"
                           }
-                        ]
+                        ],
+                        "public": true
                       },
                       {
                         "group": "Core Concepts",
