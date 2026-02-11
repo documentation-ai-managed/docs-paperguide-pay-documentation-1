@@ -820,6 +820,16 @@
             ]
           }
         ]
+      },
+      {
+        "product": "new",
+        "pages": [
+          {
+            "title": "Yash",
+            "path": "yash"
+          }
+        ],
+        "public": true
       }
     ]
   },
