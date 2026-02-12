@@ -52,13 +52,13 @@
                           {
                             "title": "Introduction",
                             "path": "introduction",
-                            "icon": "home",
-                            "public": true
+                            "icon": "home"
                           },
                           {
                             "title": "Quickstart",
                             "path": "quickstart",
-                            "icon": "zap"
+                            "icon": "zap",
+                            "public": true
                           }
                         ]
                       },
