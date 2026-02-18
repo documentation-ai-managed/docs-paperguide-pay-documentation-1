@@ -63,7 +63,8 @@
                             "show-sidebar": false,
                             "show-toc": true,
                             "show-parent-label": false,
-                            "content-width": "wide"
+                            "content-width": "wide",
+                            "badge": "deprecated"
                           }
                         ]
                       },
