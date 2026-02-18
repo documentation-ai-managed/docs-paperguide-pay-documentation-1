@@ -60,11 +60,9 @@
                             "path": "quickstart",
                             "icon": "zap",
                             "public": true,
-                            "show-sidebar": false,
-                            "show-toc": true,
-                            "show-parent-label": false,
-                            "content-width": "wide",
-                            "badge": "deprecated"
+                            "show-toc": false,
+                            "content-width": "narrow",
+                            "badge": "New"
                           }
                         ]
                       },
