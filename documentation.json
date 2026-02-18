@@ -52,8 +52,7 @@
                           {
                             "title": "Introduction",
                             "path": "introduction",
-                            "icon": "home",
-                            "contentWidth": "wide"
+                            "icon": "home"
                           },
                           {
                             "title": "Quickstart",
@@ -62,8 +61,7 @@
                             "public": true,
                             "showSidebar": false,
                             "showTableOfContents": true,
-                            "showParentLabel": false,
-                            "contentWidth": "wide"
+                            "showParentLabel": false
                           }
                         ]
                       },
@@ -77,8 +75,7 @@
                             "icon": "star",
                             "showSidebar": true,
                             "showTableOfContents": false,
-                            "showParentLabel": true,
-                            "contentWidth": "wide"
+                            "showParentLabel": true
                           }
                         ]
                       },
@@ -91,8 +88,7 @@
                             "path": "integrations",
                             "icon": "plug",
                             "showSidebar": true,
-                            "showParentLabel": false,
-                            "contentWidth": "wide"
+                            "showParentLabel": false
                           }
                         ]
                       }
