@@ -52,13 +52,21 @@
                           {
                             "title": "Introduction",
                             "path": "introduction",
-                            "icon": "home"
+                            "icon": "home",
+                            "showSidebar": true,
+                            "showTableOfContents": true,
+                            "showParentLabel": true,
+                            "contentWidth": "narrow"
                           },
                           {
                             "title": "Quickstart",
                             "path": "quickstart",
                             "icon": "zap",
-                            "public": true
+                            "public": true,
+                            "showSidebar": true,
+                            "showTableOfContents": true,
+                            "showParentLabel": true,
+                            "contentWidth": "normal"
                           }
                         ]
                       },
@@ -69,7 +77,11 @@
                           {
                             "title": "Features",
                             "path": "features",
-                            "icon": "star"
+                            "icon": "star",
+                            "showSidebar": true,
+                            "showTableOfContents": false,
+                            "showParentLabel": true,
+                            "contentWidth": "wide"
                           }
                         ]
                       },
@@ -80,7 +92,11 @@
                           {
                             "title": "Integrations",
                             "path": "integrations",
-                            "icon": "plug"
+                            "icon": "plug",
+                            "showSidebar": false,
+                            "showTableOfContents": false,
+                            "showParentLabel": false,
+                            "contentWidth": "wide"
                           }
                         ]
                       }
@@ -97,12 +113,20 @@
                           {
                             "title": "Introduction",
                             "path": "introduction",
-                            "icon": "home"
+                            "icon": "home",
+                            "showSidebar": false,
+                            "showTableOfContents": false,
+                            "showParentLabel": false,
+                            "contentWidth": "normal"
                           },
                           {
                             "title": "Quickstart",
                             "path": "quickstart",
-                            "icon": "zap"
+                            "icon": "zap",
+                            "showSidebar": false,
+                            "showTableOfContents": false,
+                            "showParentLabel": false,
+                            "contentWidth": "normal"
                           }
                         ]
                       }
@@ -119,7 +143,10 @@
                           {
                             "title": "Intro to Paperguide-pay",
                             "path": "introduction",
-                            "icon": "home"
+                            "icon": "home",
+                            "showTableOfContents": true,
+                            "showParentLabel": true,
+                            "contentWidth": "narrow"
                           },
                           {
                             "title": "Quickstart Basics",
@@ -155,12 +182,14 @@
                           {
                             "title": "Feature Deep Dive",
                             "path": "features",
-                            "icon": "star"
+                            "icon": "star",
+                            "contentWidth": "wide"
                           },
                           {
                             "title": "Integrations Deep Dive",
                             "path": "integrations",
-                            "icon": "plug"
+                            "icon": "plug",
+                            "contentWidth": "wide"
                           }
                         ]
                       },
@@ -281,42 +310,52 @@
                           {
                             "title": "Introduction to Paperguide-pay Platform Overview",
                             "path": "introduction",
-                            "icon": "home"
+                            "icon": "home",
+                            "contentWidth": "wide",
+                            "showTableOfContents": false
                           },
                           {
                             "title": "Introduction for New Stakeholders and Admins",
                             "path": "introduction",
-                            "icon": "home"
+                            "icon": "home",
+                            "contentWidth": "wide",
+                            "showTableOfContents": false
                           },
                           {
                             "title": "Quickstart Guide for First-Time Users",
                             "path": "quickstart",
-                            "icon": "zap"
+                            "icon": "zap",
+                            "contentWidth": "wide"
                           },
                           {
                             "title": "Quickstart Guide for Technical Teams",
                             "path": "quickstart",
-                            "icon": "zap"
+                            "icon": "zap",
+                            "contentWidth": "wide"
                           },
                           {
                             "title": "Feature Summary and High-Level Capabilities",
                             "path": "features",
-                            "icon": "star"
+                            "icon": "star",
+                            "contentWidth": "wide"
                           },
                           {
                             "title": "Feature Comparison and Use Case Mapping",
                             "path": "features",
-                            "icon": "star"
+                            "icon": "star",
+                            "contentWidth": "wide"
                           },
                           {
                             "title": "Integration Overview and Ecosystem Map",
                             "path": "integrations",
-                            "icon": "plug"
+                            "icon": "plug",
+                            "contentWidth": "wide"
                           },
                           {
                             "title": "Integration Prerequisites and Setup Checklist",
                             "path": "integrations",
-                            "icon": "plug"
+                            "icon": "plug",
+                            "contentWidth": "wide"
                           }
                         ]
                       },
@@ -327,42 +366,50 @@
                           {
                             "title": "Step-by-Step Introduction to Implementation",
                             "path": "introduction",
-                            "icon": "home"
+                            "icon": "home",
+                            "contentWidth": "normal"
                           },
                           {
                             "title": "Implementation Quickstart for Sandboxes",
                             "path": "quickstart",
-                            "icon": "zap"
+                            "icon": "zap",
+                            "contentWidth": "normal"
                           },
                           {
                             "title": "Implementation Quickstart for Production Environments",
                             "path": "quickstart",
-                            "icon": "zap"
+                            "icon": "zap",
+                            "contentWidth": "normal"
                           },
                           {
                             "title": "Implementation Features and Configuration Options",
                             "path": "features",
-                            "icon": "star"
+                            "icon": "star",
+                            "contentWidth": "normal"
                           },
                           {
                             "title": "Feature Flags and Rollout Strategies",
                             "path": "features",
-                            "icon": "star"
+                            "icon": "star",
+                            "contentWidth": "normal"
                           },
                           {
                             "title": "Core Integrations Implementation Playbook",
                             "path": "integrations",
-                            "icon": "plug"
+                            "icon": "plug",
+                            "contentWidth": "normal"
                           },
                           {
                             "title": "Advanced Integrations and Custom Connectors",
                             "path": "integrations",
-                            "icon": "plug"
+                            "icon": "plug",
+                            "contentWidth": "normal"
                           },
                           {
                             "title": "Integration Testing and Validation Workflow",
                             "path": "integrations",
-                            "icon": "plug"
+                            "icon": "plug",
+                            "contentWidth": "normal"
                           }
                         ]
                       },
@@ -373,42 +420,51 @@
                           {
                             "title": "Operational Introduction and Daily Workflow Overview",
                             "path": "introduction",
-                            "icon": "home"
+                            "icon": "home",
+                            "contentWidth": "wide",
+                            "showParentLabel": false
                           },
                           {
                             "title": "Operations Quickstart for Support Teams",
                             "path": "quickstart",
-                            "icon": "zap"
+                            "icon": "zap",
+                            "contentWidth": "wide"
                           },
                           {
                             "title": "Operations Quickstart for Finance and Billing",
                             "path": "quickstart",
-                            "icon": "zap"
+                            "icon": "zap",
+                            "contentWidth": "wide"
                           },
                           {
                             "title": "Operational Features for Monitoring and Alerts",
                             "path": "features",
-                            "icon": "star"
+                            "icon": "star",
+                            "contentWidth": "wide"
                           },
                           {
                             "title": "Feature Usage Patterns and Best Practices",
                             "path": "features",
-                            "icon": "star"
+                            "icon": "star",
+                            "contentWidth": "wide"
                           },
                           {
                             "title": "Standard Integrations for Operations and Reporting",
                             "path": "integrations",
-                            "icon": "plug"
+                            "icon": "plug",
+                            "contentWidth": "wide"
                           },
                           {
                             "title": "Custom Integrations for Back-Office Systems",
                             "path": "integrations",
-                            "icon": "plug"
+                            "icon": "plug",
+                            "contentWidth": "wide"
                           },
                           {
                             "title": "Disaster Recovery and Business Continuity Integrations",
                             "path": "integrations",
-                            "icon": "plug"
+                            "icon": "plug",
+                            "contentWidth": "wide"
                           }
                         ]
                       }
@@ -425,17 +481,21 @@
                           {
                             "title": "Help Center Overview",
                             "path": "help-center",
-                            "icon": "home"
+                            "icon": "home",
+                            "showParentLabel": false,
+                            "contentWidth": "normal"
                           },
                           {
                             "title": "Help Center for New Users",
                             "path": "help-center",
-                            "icon": "home"
+                            "icon": "home",
+                            "contentWidth": "narrow"
                           },
                           {
                             "title": "Help Center for Admins",
                             "path": "help-center",
-                            "icon": "home"
+                            "icon": "home",
+                            "contentWidth": "normal"
                           }
                         ]
                       },
@@ -446,17 +506,20 @@
                           {
                             "title": "Getting Started FAQ",
                             "path": "help-center/faq/getting-started",
-                            "icon": "help-circle"
+                            "icon": "help-circle",
+                            "showTableOfContents": false
                           },
                           {
                             "title": "Onboarding FAQ and Common Questions",
                             "path": "help-center/faq/getting-started",
-                            "icon": "help-circle"
+                            "icon": "help-circle",
+                            "showTableOfContents": false
                           },
                           {
                             "title": "Account Setup FAQ for Teams",
                             "path": "help-center/faq/getting-started",
-                            "icon": "help-circle"
+                            "icon": "help-circle",
+                            "showTableOfContents": false
                           }
                         ]
                       },
@@ -747,7 +810,11 @@
                       {
                         "title": "Release History",
                         "path": "changelog",
-                        "icon": "history"
+                        "icon": "history",
+                        "showSidebar": false,
+                        "showTableOfContents": false,
+                        "showParentLabel": false,
+                        "contentWidth": "wide"
                       }
                     ]
                   },
