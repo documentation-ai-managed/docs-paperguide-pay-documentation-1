@@ -1,55 +1,73 @@
 ---
-title: Rule
-public: true
+title: How to create an automation
+description: 'Create automatic rules to categorize, modify, and manage your transactions.'
 ---
-# Rule 4: Source of Meat and Fat Ingredients
+<Callout kind="info" collapsed="false">
+  ℹ️ Video translation into English in progress
+</Callout>
 
-The source and quality of meat and fat ingredients play a crucial role in determining the overall quality of dry cat food.
+<Video src="https://www.youtube.com/embed/t_RbNALwb-c" render-type="iframe" width="672" height="378" controls="true" allow-full-screen="true" style="{ width: &#x22;672px&#x22;, height: &#x22;auto&#x22;, cursor: &#x22;pointer&#x22; }" />
 
-This rule evaluates these sources and deducts points accordingly.
+To create an automation, the first thing you need to do is go to the [Automations section](https://app.banktrack.com/reglas-automaticas).
 
-## Quality Factors for By-product Meat and Unknown Sources
+Click on the **Add automation** button to create a new automation, and a screen will open where you can configure it.
 
-1. **By-product Meat Quality Factor**: By-product meats, such as internal organs and intestines, are considered lower-quality protein sources compared to whole meats. They are assigned a quality factor of 1/4 or 0.25, meaning they are considered one-fourth as valuable as whole meat sources.
+The first step is to define when the automation will be triggered. You can choose from different triggers:
 
-2. **Unknown Source Quality Factor**: When the source of the main meat or fat ingredient is not specified (e.g., "meat and meat derivatives," "animal fats," "vegetable oils"), the quality of these ingredients cannot be properly evaluated. This uncertainty leads to a deduction of points.
+<Tabs>
+  <Tab title="By description">
+    When the transaction's description contains the specified word, the automation will be executed.
 
-## Calculation of Points Deduction Based on Meat and Fat Ingredient Sources
+    This is very useful for transactions that always have the same description. For example: "When the transaction description contains Google Ads, tag it as *Advertising*."
+  </Tab>
 
-1. **By-product Meat Quantity Factor**:
+  <Tab title="By type">
+    When the transaction is an income or expense with an amount equal to, greater than, or less than the defined amount.
 
-   - By-product as the main meat ingredient: -1 (full deduction)
+    This is very useful for recurring transactions with the same amount. For example: "When a transaction is an expense of exactly €725, tag it as *Rent*."
+  </Tab>
 
-   - Partial by-product as the main meat ingredient (e.g., "chicken and chicken by-product"): -1/2 (half deduction)\\
+  <Tab title="Custom">
+    When you need to specify multiple conditions to trigger the automation, you can use a **Custom Rule.**
 
-   Points deducted = (Total dry matter protein %) × (By-product quantity factor) × (By-product quality factor)\\
+    For example, to identify transfers between your own accounts, which may vary from one bank to another, you can create several rules to mark them as not accounted for.
 
-   Example: 34% protein, partial by-product meat meal Points deducted = 34 × (-1/2) × (1/4) = -4.25 points
 
-2. **By-product Supplement Meat Ingredient Location Impact**:
+  </Tab>
+</Tabs>
 
-   - By-product supplement meat ingredient at 2nd-3rd places: -4 points
+Once the automation trigger is defined, you'll need to specify the action that will be triggered. There are several options to choose from:
 
-   - By-product supplement meat ingredient at 4th-5th places: -2 points
+<Tabs>
+  <Tab title="Modify the description">
+    When the defined conditions are met, the transaction description will be automatically modified. You can:
 
-   - By-product supplement meat ingredient at 6th-7th places: -1 point
+    - Add the desired text to the end of the original description.
 
-3. **Unknown Source of Main Ingredients**:
+    - Add the desired text to the beginning (i.e., before) of the original description.
 
-   - Unknown source of the main meat ingredient: -5 points
+    - Completely replace the description with the desired text.
 
-   - Unknown source of the main fat ingredient: -3 points
+    An example of this action could be for transaction descriptions that are unclear. For example: "Replace Purchase at AMZN with Purchase at AMAZON."
 
-## Explanation of the Impact of By-products on Food Quality
 
-By-products, such as internal organs and intestines, are considered lower-quality sources of protein for cats for several reasons:
+  </Tab>
 
-1. **Undefined Content**: By-products' exact composition and nutritional value can vary significantly, making it difficult to assess their quality and suitability for a cat's diet.
+  <Tab title="Categorize">
+    This action will change the [category](/banktrack/en/tags/how-to-create-a-custom-category) of transactions that meet the rule. You can select the category to apply from the list of categories and subcategories you have defined in Banktrack.
+  </Tab>
 
-2. **Quality Control**: The quality control and processing methods for by-products are generally less stringent than those for whole meat sources, potentially leading to inconsistencies and contamination.
+  <Tab title="Ignore">
+    This action will mark transactions that meet the rule as [Not Accountable](/banktrack/en/transactions/how-to-ignore-a-transaction). This prevents transfers between your own accounts from appearing as both an income and an expense, for example.
+  </Tab>
+</Tabs>
 
-3. **Digestibility**: By-products are often less digestible for cats compared to whole meat sources, which can lead to nutrient malabsorption and digestive issues.
+Finally, you'll just need to specify the bank accounts to which you want to apply these automated rules and provide a name to identify the automation.
 
-4. **Allergies and Intolerances**: Some cats may develop allergies or intolerances to certain by-products, particularly those derived from less common sources or processed under suboptimal conditions.
+When you click **Save automation**, a modal window will appear, allowing you to **Preview the automation** before applying it to the transaction history.
 
-While by-products can contribute to the overall protein content of cat food, their lower quality and potential negative impacts on digestibility and health make them less desirable as the primary protein source. Whole meat sources, especially those from high-quality, named sources, are generally preferred for obligate carnivores like cats.
+This way, you can ensure that the defined actions work as expected. You can skip this step and apply it later using the **🔄 Apply Retrospectively** button whenever you wish.
+
+From now on, the automations will be applied to all new transactions received in Banktrack when syncing with the banks, as long as they meet the defined rules.
+
+If you have any questions regarding automations, you can contact us via the chat you'll find in the bottom right corner of the screen.
