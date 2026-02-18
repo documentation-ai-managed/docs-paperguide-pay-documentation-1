@@ -60,7 +60,6 @@
                             "path": "quickstart",
                             "icon": "zap",
                             "public": true,
-                            "show-toc": false,
                             "content-width": "narrow",
                             "badge": "New"
                           }
