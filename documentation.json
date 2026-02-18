@@ -53,19 +53,19 @@
                             "title": "Introduction",
                             "path": "introduction",
                             "icon": "home",
-                            "showSidebar": true,
-                            "showTableOfContents": true,
-                            "showParentLabel": true,
-                            "contentWidth": "narrow"
+                            "showSidebar": false,
+                            "showTableOfContents": false,
+                            "showParentLabel": false,
+                            "contentWidth": "wide"
                           },
                           {
                             "title": "Quickstart",
                             "path": "quickstart",
                             "icon": "zap",
                             "public": true,
-                            "showSidebar": true,
-                            "showTableOfContents": true,
-                            "showParentLabel": true,
+                            "showSidebar": false,
+                            "showTableOfContents": false,
+                            "showParentLabel": false,
                             "contentWidth": "normal"
                           }
                         ]
@@ -79,7 +79,7 @@
                             "path": "features",
                             "icon": "star",
                             "showSidebar": true,
-                            "showTableOfContents": false,
+                            "showTableOfContents": true,
                             "showParentLabel": true,
                             "contentWidth": "wide"
                           }
@@ -93,7 +93,7 @@
                             "title": "Integrations",
                             "path": "integrations",
                             "icon": "plug",
-                            "showSidebar": false,
+                            "showSidebar": true,
                             "showTableOfContents": false,
                             "showParentLabel": false,
                             "contentWidth": "wide"
