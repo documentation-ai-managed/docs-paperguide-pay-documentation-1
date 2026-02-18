@@ -142,7 +142,8 @@
                             "icon": "home",
                             "show-toc": true,
                             "show-parent-label": true,
-                            "content-width": "narrow"
+                            "content-width": "narrow",
+                            "badge": "Depricated"
                           },
                           {
                             "title": "Quickstart Basics",
