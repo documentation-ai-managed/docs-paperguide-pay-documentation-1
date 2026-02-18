@@ -52,11 +52,7 @@
                           {
                             "title": "Introduction",
                             "path": "introduction",
-                            "icon": "home",
-                            "showSidebar": false,
-                            "showTableOfContents": false,
-                            "showParentLabel": false,
-                            "contentWidth": "wide"
+                            "icon": "home"
                           },
                           {
                             "title": "Quickstart",
@@ -64,9 +60,9 @@
                             "icon": "zap",
                             "public": true,
                             "showSidebar": false,
-                            "showTableOfContents": false,
+                            "showTableOfContents": true,
                             "showParentLabel": false,
-                            "contentWidth": "normal"
+                            "contentWidth": "wide"
                           }
                         ]
                       },
@@ -79,9 +75,9 @@
                             "path": "features",
                             "icon": "star",
                             "showSidebar": true,
-                            "showTableOfContents": true,
+                            "showTableOfContents": false,
                             "showParentLabel": true,
-                            "contentWidth": "wide"
+                            "contentWidth": "normal"
                           }
                         ]
                       },
@@ -94,9 +90,8 @@
                             "path": "integrations",
                             "icon": "plug",
                             "showSidebar": true,
-                            "showTableOfContents": false,
                             "showParentLabel": false,
-                            "contentWidth": "wide"
+                            "contentWidth": "normal"
                           }
                         ]
                       }
