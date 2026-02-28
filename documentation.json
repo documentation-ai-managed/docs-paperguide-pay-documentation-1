@@ -50,10 +50,6 @@
                         "icon": "rocket",
                         "pages": [
                           {
-                            "title": "ក្រមព្រហ្មទណ្ឌនៃ",
-                            "path": "ក្រមព្រហ្មទណ្ឌនៃព្រះរាជាណាចក្រកម្ពុជា"
-                          },
-                          {
                             "title": "Introduction",
                             "path": "introduction",
                             "icon": "home",
