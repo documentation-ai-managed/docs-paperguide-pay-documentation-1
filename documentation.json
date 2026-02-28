@@ -50,6 +50,10 @@
                         "icon": "rocket",
                         "pages": [
                           {
+                            "title": "hi there",
+                            "path": "hi-there"
+                          },
+                          {
                             "title": "Introduction",
                             "path": "introduction",
                             "icon": "home",
