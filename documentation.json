@@ -67,7 +67,8 @@
                             "content-width": "narrow",
                             "badge": "New"
                           }
-                        ]
+                        ],
+                        "openapi": "api-reference/openapi.json"
                       },
                       {
                         "group": "Core Concepts",
