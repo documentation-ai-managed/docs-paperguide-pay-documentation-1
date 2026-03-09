@@ -2,7 +2,7 @@
   "openapi": "3.0.2",
   "info": {
     "title": "Deepvue.tech Developers' Guide",
-    "description": "Deepvue.tech's APIs and SDKs are a No-Code Solution to Document Digitization and Verification for Businesses.",
+    "description": "Deepvue.tech's APIs and SDKs are a No-Code Solution to Document Digitization and Verification for Businesses",
     "version": "v1",
     "x-logo": {
       "url": "https://deepvue.tech/wp-content/uploads//2022/01/deepvue-logo1-1.svg"
